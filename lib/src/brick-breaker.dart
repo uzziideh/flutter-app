@@ -10,37 +10,6 @@ import '../components/components.dart';
 import 'config.dart';
 
 enum PlayState { welcome, playing, gameOver, won }
-
-class ScoreHeader {
-  int _highestScore = 0;
-
-  void updateScore(int newScore) {
-    if (newScore > _highestScore) {
-      _highestScore = newScore;
-      Text('New highest score: $_highestScore');
-      updateHeader();
-    }
-  }
-
-  void updateHeader() {
-    Text('Header updated: Highest Score: $_highestScore');
-    // In a real application, you would update the UI here.
-  }
-}
-
-void main() {
-  ScoreHeader scoreHeader = ScoreHeader();
-
-  // Simulating game scores updating
-  List<int> scores = [100, 150, 120, 200, 180, 250, 160, 300, 280];
-
-  for (int score in scores) {
-    scoreHeader.updateScore(score);
-    // Simulating delay between score updates
-    Future.delayed(Duration(seconds: 1));
-  }
-}
-
 class BrickBreaker extends FlameGame with HasCollisionDetection, KeyboardEvents, TapDetector {
   BrickBreaker()
       : super(

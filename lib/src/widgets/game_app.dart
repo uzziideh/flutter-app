@@ -5,7 +5,8 @@ import 'package:google_fonts/google_fonts.dart';
 import '../brick-breaker.dart';
 import '../config.dart';
 import 'overlay_screen.dart';                              
-import 'score_card.dart';                                      
+import 'score_card.dart';  
+
 
 class GameApp extends StatefulWidget {                          
   const GameApp({super.key});
